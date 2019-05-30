@@ -2,6 +2,19 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
-app.get('/', (req, res) => res.send('Hello World!'));
+let routes = require('./routes');
+let models = require('./models');
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+//including models on the request context
+//request context middleware
+app.use((req, res, next) => {
+	req.context = {
+		models,
+	};
+	next();
+});
+
+app.use('/car', routes.car);
+app.use('/customer', routes.customer);
+
+app.listen(port);

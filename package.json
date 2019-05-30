@@ -28,6 +28,8 @@
 		"swagger-jsdoc": "^3.2.9"
 	},
 	"devDependencies": {
+		"@babel/core": "^7.4.5",
+		"@babel/preset-env": "^7.4.5",
 		"eslint": "^5.16.0",
 		"mocha": "^6.1.4"
 	}
