@@ -1,30 +1,31 @@
 {
-  "name": "circuit-demo-api",
-  "version": "1.0.0",
-  "description": "a demo express api for circuit",
-  "main": "app.js",
-  "scripts": {
-    "test": "test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/thegeektets/circuit-demo-api.git"
-  },
-  "keywords": [
-    "demo",
-    "express"
-  ],
-  "author": "Griffin M",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/thegeektets/circuit-demo-api/issues"
-  },
-  "homepage": "https://github.com/thegeektets/circuit-demo-api#readme",
-  "dependencies": {
-    "express": "^4.17.1",
-    "swagger-jsdoc": "^3.2.9"
-  },
-  "devDependencies": {
-    "mocha": "^6.1.4"
-  }
+	"name": "circuit-demo-api",
+	"version": "1.0.0",
+	"description": "a demo express api for circuit",
+	"main": "app.js",
+	"scripts": {
+		"test": "test",
+		"start": "node app.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/thegeektets/circuit-demo-api.git"
+	},
+	"keywords": [
+		"demo",
+		"express"
+	],
+	"author": "Griffin M",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/thegeektets/circuit-demo-api/issues"
+	},
+	"homepage": "https://github.com/thegeektets/circuit-demo-api#readme",
+	"dependencies": {
+		"express": "^4.17.1",
+		"swagger-jsdoc": "^3.2.9"
+	},
+	"devDependencies": {
+		"mocha": "^6.1.4"
+	}
 }
