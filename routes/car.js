@@ -4,7 +4,7 @@ const router = Router();
 
 /**
  * @swagger
- * /car:
+ * car:
  *   get:
  *     tags:
  *       - car

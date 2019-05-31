@@ -9,6 +9,6 @@
 		"url": "",
 		"email": ""
 	},
-	"host": "localhost:3000/",
+	"host": "localhost:3000",
 	"basePath": ""
 }
