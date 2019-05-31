@@ -4,8 +4,12 @@
 	"description": "a demo express api for circuit",
 	"main": "app.js",
 	"scripts": {
-		"test": "test",
+		"test": "nyc mocha tests/*test.js --timeout 10000",
 		"start": "node app.js"
+	},
+	"nyc": {
+		"all": true,
+		"check-coverage": true
 	},
 	"repository": {
 		"type": "git",
@@ -23,6 +27,8 @@
 	"homepage": "https://github.com/thegeektets/circuit-demo-api#readme",
 	"dependencies": {
 		"body-parser": "^1.19.0",
+		"chai": "^4.2.0",
+		"chai-http": "^4.3.0",
 		"express": "^4.17.1",
 		"mongoose": "^5.5.11",
 		"swagger-jsdoc": "^3.2.9"
@@ -31,6 +37,7 @@
 		"@babel/core": "^7.4.5",
 		"@babel/preset-env": "^7.4.5",
 		"eslint": "^5.16.0",
-		"mocha": "^6.1.4"
+		"mocha": "^6.1.4",
+		"nyc": "^14.1.1"
 	}
 }

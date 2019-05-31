@@ -1,0 +1,14 @@
+{
+	"info": {
+		"title": "Circuit Demo API",
+		"version": "1.0.0",
+		"description": "Circuit Demo APIs"
+	},
+	"contact": {
+		"name": "Griffin",
+		"url": "",
+		"email": ""
+	},
+	"host": "localhost:3000/",
+	"basePath": ""
+}
