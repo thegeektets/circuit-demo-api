@@ -15,13 +15,58 @@ const router = Router();
  *       200:
  *         description:  stored customer and model schema
  */
-router.get('/', (req, res) => {
-	var customerSchema = require('mongoose').model('Customer').schema.obj;
+router.get('/', async (req, res) => {
+	var customerSchema = require('mongoose').model('customer').schema.obj;
 	let response = {
 		modelInfo: customerSchema,
 		data: req.context.models.customer,
 	};
 	return res.send(response);
+});
+
+/**
+ * @swagger
+ * definition:
+ *   createCustomerPayload:
+ *     properties:
+ *       firstName:
+ *         type: string
+ *       lastName:
+ *         type: string
+ *       email:
+ *         type: string
+ *       phoneNumber:
+ *         type: string
+ *       DOB:
+ *         type: date
+ *
+ *
+ */
+
+/**
+ * @swagger
+ * customer:
+ *   post:
+ *     tags:
+ *       - customer
+ *     description: create a new customer in the system
+ *     produces:
+ *       - application/json
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             $ref: '#/definitions/createCustomerPayload'
+ *     responses:
+ *       200:
+ *         description:  stored customer and model schema
+ */
+
+router.post('/', async (req, res) => {
+	var customerModel = require('.././models/customer');
+	let respond = await customerModel.createCustomer(req.body);
+	res.status(respond.statusCode).send(respond.result);
 });
 
 module.exports = router;

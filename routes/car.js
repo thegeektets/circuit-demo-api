@@ -16,7 +16,7 @@ const router = Router();
  *         description:  stored cars and model schema
  */
 router.get('/', (req, res) => {
-	var carSchema = require('mongoose').model('Car').schema.obj;
+	var carSchema = require('mongoose').model('car').schema.obj;
 	let response = {
 		modelInfo: carSchema,
 		data: req.context.models.car,

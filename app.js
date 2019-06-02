@@ -5,6 +5,13 @@ const port = 3000;
 const swaggerJSDoc = require('swagger-jsdoc');
 const swaggerDefinition = require('./swagger.json');
 const path = require('path');
+const bodyParser = require('body-parser');
+const initDatabase = require('./config/database');
+
+app.use(bodyParser.json());
+
+//db connection
+initDatabase();
 
 const options = {
 	swaggerDefinition,
@@ -21,16 +28,6 @@ app.get('/docs', (req, res) => {
 });
 
 let routes = require('./routes');
-let models = require('./models');
-
-//including models on the request context
-//request context middleware
-app.use((req, res, next) => {
-	req.context = {
-		models,
-	};
-	next();
-});
 
 app.use('/car', routes.car);
 app.use('/customer', routes.customer);

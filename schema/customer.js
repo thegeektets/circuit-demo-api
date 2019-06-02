@@ -1,5 +1,6 @@
 let mongoose = require('mongoose');
 const customerSchema = new mongoose.Schema({
+	_id: mongoose.Schema.Types.ObjectId,
 	firstName: {
 		type: String,
 		required: true,
@@ -23,6 +24,6 @@ const customerSchema = new mongoose.Schema({
 	},
 });
 
-const Customer = mongoose.model('Customer', customerSchema);
+const Customer = mongoose.model('customer', customerSchema);
 
-module.export = Customer;
+module.exports = Customer;
