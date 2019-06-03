@@ -25,7 +25,7 @@ exports.createCustomer = async payload => {
 		.then(res => {
 			let response = {
 				statusCode: 200,
-				result: { status: false, data: res },
+				result: { status: true, data: res },
 			};
 			return response;
 		})
@@ -38,4 +38,12 @@ exports.createCustomer = async payload => {
 		});
 
 	return createRes;
+};
+
+exports.getCustomers = async () => {
+	let customerList = await Customer.find({}).then(function(customers) {
+		return customers;
+	});
+
+	return customerList;
 };

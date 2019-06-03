@@ -16,10 +16,12 @@ const router = Router();
  *         description:  stored customer and model schema
  */
 router.get('/', async (req, res) => {
-	var customerSchema = require('mongoose').model('customer').schema.obj;
+	let customerSchema = require('../schema/customer');
+	let customerModel = require('../models/customer');
+
 	let response = {
-		modelInfo: customerSchema,
-		data: req.context.models.customer,
+		modelInfo: customerSchema.schema.obj,
+		data: await customerModel.getCustomers(),
 	};
 	return res.send(response);
 });
