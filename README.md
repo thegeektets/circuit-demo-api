@@ -12,8 +12,14 @@ to run the application on dev :
   - the application will run on port 3000
   
 
-#documentation 
+# documentation 
 
 the documentation is avaliable on `/docs` on the base root url `http://localhost:3000/docs`
+
+
+# mongoAtlas  
+
+the repository configs contain the connection settings to mongodb hosted on mongo atlas - please edit to include personal database configs
+
 
 
