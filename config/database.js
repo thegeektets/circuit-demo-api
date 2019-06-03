@@ -7,6 +7,7 @@ let dbURL = `mongodb+srv://${custom_config.mongodb.username}:${
 let dbOptions = {
 	useNewUrlParser: true,
 	useCreateIndex: true,
+	useFindAndModify: false,
 };
 module.exports = function() {
 	mongoose.connect(dbURL, dbOptions);
