@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+/* eslint-disable no-undef */
 let mongoose = require('mongoose');
 let custom_config = require('./custom');
 

@@ -94,7 +94,7 @@ router.post('/', async (req, res) => {
 /**
  * @swagger
  * customer:
- *   post:
+ *   put:
  *     tags:
  *       - customer
  *     description: update exisitng customer in the system
